@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body style="background-image: url(background.jpg);background-size: cover;";>
+    
+  <nav class="bg-gradient-to-r from-sky-700 to-cyan-300 shadow-lg">
+    <div class="mx-auto px-5">
+      <div class="flex justify-between">
+
+        <div class="flex">
+            <a href="#" class="flex items-center py-4 px-2">
+                <img src="weather.png" class="h-8 w-8 mr-2">
+                <span class="font-semibold text-gray-100 text-base sm:text-xl ml-1 mr-2 sm:ml-10 sm:mr-3">Weather Api Website</span>
+            </a>
+        </div>
+
+        <div class="flex items-center space-x-1 text-stone-900">
+            <a href="" class="py-4 px-2 font-semibold hover:text-gray-500 hover:underline transition duration-300">
+                Home
+            </a>
+            <a href="" class="py-4 px-2 font-semibold hover:text-gray-500 hover:underline transition duration-300">
+                About
+            </a>
+            <a href="" class="py-4 px-2 font-semibold hover:text-gray-500 hover:underline transition duration-300">
+                Contact
+            </a>
+           </div>
+
+        </div>
+    </div>
+  </nav>
+
+
+    <h1 class="text-5xl text-black text-center mt-10 font-bold ">Weather Update!</h1>
+    <div class="w-11/12 m-auto"><a class="font-bold flex justify-center mt-5 text-xl sm:text-2xl underline hover:text-gray-700" href="https://www.latlong.net/">Find latitude and longitude of place?</a></div>
+  <div class="w-9/12 m-auto bg-indigo-500 p-10 mt-10 rounded-lg bg-gradient-to-r from-sky-700 to-teal-300 border-4 border-sky-950 mb-10">
+    
+    <!-- <input class="w-2/5 h-14 mr-20 mb-5 border-2 border-blue-950 rounded-full px-3 placeholder:text-slate-900 shadow-xl text-2xl" type="text" placeholder="Enter the city:" spellcheck="false" id="city">
+    <button class="w-14 h-14 float-right bg-white border-2 border-blue-950 rounded-full" title="button" id="citysearch"><img class="w-8 m-auto" src="search.png"></button>
+    <div class="mb-10 w-1/2 text-2xl font-semibold"><h2>LATITUDE:</h2><h3 id="findlatitude"></h3></div>
+    <div class="mb-10 w-1/2 text-2xl font-semibold"><h2>LONGITUDE:</h2><h3 id="findlongitude"></h3></div> -->
+
+       
+    <div class="search mb-5 text-sm sm:text-xl md:text-2xl flex flex-wrap">
+        <input class="w-4/5 h-14 mr-10 mb-5 border-2 border-blue-950 rounded-xl px-3 sm:rounded-full placeholder:text-slate-900 shadow-xl" type="text" placeholder="Latitude" spellcheck="false" id="text1">
+        <input class="w-4/5 h-14 mb-5 mr-10 border-2 border-blue-950 rounded-xl px-3 sm:rounded-full placeholder:text-slate-900 shadow-xl" type="text" placeholder="Longitude" spellcheck="false" id="text2">
+        <button class="w-14 h-14 float-right bg-white border-2 border-blue-950 rounded-full hover:bg-slate-400" title="button"><img class="w-8 m-auto" src="search.png"></button>
+    </div>
+
+    <div class="data grid grid-cols-1 sm:grid-cols-2 text-xl font-semibold sm:border-4 sm:rounded-md sm:border-sky-900 p-3">
+        <div class="mb-10 w-1/2"><h2 class="md:text-2xl"><img src="https://img.icons8.com/ios/50/null/latitude.png" class="w-10 inline mr-2"/>LATITUDE:</h2><h3 class="ml-12 text-3xl font-semibold" id="latitude">---</h3></div>
+        <div class="mb-10 w-1/2"><h2 class="md:text-2xl"><img src="https://img.icons8.com/ios/50/null/longitude.png" class="w-10 inline mr-2"/>LONGITUDE:</h2><h3 class="ml-12 text-3xl font-semibold" id="longitude">---</h3></div>
+        <div class="mb-10 w-1/2"><h2 class="md:text-2xl"><img src="https://img.icons8.com/ios/50/null/temperature--v1.png" class="w-10 inline mr-2"/>TEMPERATURE:</h2><h3 class="ml-12 text-3xl font-semibold" id="temp">---</h3></div>
+        <div class="mb-10 w-1/2"><h2 class="md:text-2xl"><img src="https://img.icons8.com/ios-filled/50/null/moisture.png" class="w-10 inline mr-2"/>HUMIDITY:</h2><h3 class="ml-12 text-3xl font-semibold" id="humidity">---</h3></div>
+        <div class="mb-10 w-1/2"><h2 class="md:text-2xl"><img src="https://img.icons8.com/ios/50/null/wind--v1.png" class="w-10 inline mr-2"/>WIND-SPEED:</h2><h3 class="ml-12 text-3xl font-semibold" id="windspeed">---</h3></div>
+        <div class="mb-10 w-1/2"><h2 class="md:text-2xl"><img src="https://img.icons8.com/ios/50/null/wind-gauge.png" class="w-10 inline mr-2"/>WIND-DIRECTION:</h2><h3 class="ml-12 text-3xl font-semibold" id="winddirection">---</h3></div>
+    </div>
+  </div>
+
+  <nav class="bg-blue-200">
+    <div class="mx-auto px-5">
+      <div class="flex justify-between">
+
+        <div class="flex space-x-7">
+            <h3 class="flex items-center py-4 px-2">
+                <span class="font-semibold text-gray-900 text-base sm:text-xl ml-1 mr-2 sm:ml-10 sm:mr-3">©Amlan Sarangi</span>
+            </h3>
+        </div>
+
+        <div class="flex items-center text-stone-900 text-lg">
+            <a href="https://open-meteo.com/" class="py-4 px-2 font-medium hover:underline transition duration-300">
+                @open-meteo-api
+            </a>
+            <h3 class="py-4 px-2 font-semibold">Webwiz</h3>
+           </div>
+
+        </div>
+    </div>
+  </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
